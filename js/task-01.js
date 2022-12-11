@@ -1,10 +1,10 @@
-const ul = document.getElementById("categories");
-const li = ul.getElementsByClassName("item");
-const numberOfCategories = ul.childElementCount;
+const listCategories = document.querySelector("#categories");
+const listItem = listCategories.querySelectorAll(".item");
+const numberOfCategories = listCategories.childElementCount;
 
 console.log("Number of categories:", numberOfCategories);
 
-for (const itemLi of li) {
-    console.log("Category:", itemLi.firstElementChild.textContent);
-    console.log("Elements:", itemLi.firstElementChild.nextElementSibling.childElementCount);
-}
+listItem.forEach((item) => {
+    console.log("Category:", item.firstElementChild.textContent);
+    console.log("Elements:", item.firstElementChild.nextElementSibling.childElementCount);  
+})
